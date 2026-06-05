@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The God of Sticks and Stones</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="controls">
+      <button class="ctrl-btn" onclick="adjustFont(-2)" aria-label="Decrease font size">A&minus;</button>
+      <button class="ctrl-btn" onclick="adjustFont(2)" aria-label="Increase font size">A+</button>
+      <button class="ctrl-btn" onclick="toggleTheme()" id="theme-btn" aria-label="Toggle theme">&#9790;</button>
+    </div>
+  </header>
+  <div class="index-header">
+    <h1>The God of Sticks and Stones</h1>
+    <p class="subtitle">Scripture, Creation, and the Quiet Language of God</p>
+    <p class="edition-note">Beta Reading Edition</p>
+  </div>
+  <div class="toc-container">
+    <div class="start-reading-wrap">
+      <a href="front-matter.html" class="start-reading">Begin Reading &rarr;</a>
+    </div>
+    <h2 class="toc-heading">Table of Contents</h2>
+    <a href="front-matter.html" class="toc-link">Front Matter</a>
+    <div class="accordion-item">
+      <button class="accordion-header" aria-expanded="false" aria-controls="part1-panel">
+        Part I — Foundations of Creation
+        <span class="accordion-icon" aria-hidden="true">&#9662;</span>
+      </button>
+      <ul id="part1-panel" class="accordion-content" hidden>
+      <li><a href="chapter-01.html">Chapter One — Dust and Breath</a></li>
+      <li><a href="chapter-02.html">Chapter Two — The Tree and the Garden</a></li>
+      <li><a href="chapter-03.html">Chapter Three — Stone and Witness</a></li>
+      </ul>
+    </div>
+    <div class="accordion-item">
+      <button class="accordion-header" aria-expanded="false" aria-controls="part2-panel">
+        Part II — Babel and the Rise of Systems
+        <span class="accordion-icon" aria-hidden="true">&#9662;</span>
+      </button>
+      <ul id="part2-panel" class="accordion-content" hidden>
+      <li><a href="chapter-04.html">Chapter Four — Seed and Field</a></li>
+      <li><a href="chapter-05.html">Chapter Five — Brick and Empire</a></li>
+      <li><a href="chapter-06.html">Chapter Six — Wells and Depths</a></li>
+      <li><a href="chapter-07.html">Chapter Seven — Wilderness and Shepherds</a></li>
+      </ul>
+    </div>
+    <div class="accordion-item">
+      <button class="accordion-header" aria-expanded="false" aria-controls="part3-panel">
+        Part III — Temple, Christ, and Fulfillment
+        <span class="accordion-icon" aria-hidden="true">&#9662;</span>
+      </button>
+      <ul id="part3-panel" class="accordion-content" hidden>
+      <li><a href="chapter-08.html">Chapter Eight — Mountains, Caves, and Lower Places</a></li>
+      <li><a href="chapter-09.html">Chapter Nine — Temple and Tabernacle</a></li>
+      <li><a href="chapter-10.html">Chapter Ten — The Carpenter and the Cross</a></li>
+      <li><a href="chapter-11.html">Chapter Eleven — Babel After Babel</a></li>
+      <li><a href="chapter-12.html">Chapter Twelve — The Language of Creation</a></li>
+      </ul>
+    </div>
+    <div class="accordion-item">
+      <button class="accordion-header" aria-expanded="false" aria-controls="part4-panel">
+        Part IV — Restoration and the Living Field
+        <span class="accordion-icon" aria-hidden="true">&#9662;</span>
+      </button>
+      <ul id="part4-panel" class="accordion-content" hidden>
+      <li><a href="chapter-13.html">Chapter Thirteen — The Stone the Builders Rejected</a></li>
+      <li><a href="chapter-14.html">Chapter Fourteen — The Living Field</a></li>
+      <li><a href="chapter-15.html">Chapter Fifteen — The Harvest and the Laborers</a></li>
+      <li><a href="chapter-16.html">Chapter Sixteen — Rivers, Wells, and Living Water</a></li>
+      <li><a href="chapter-17.html">Chapter Seventeen — The Final City and the Restored Garden</a></li>
+      <li><a href="chapter-18.html">Chapter Eighteen — The God of Sticks and Stones</a></li>
+      </ul>
+    </div>
+    <a href="closing-reflection.html" class="toc-link">Closing Reflection — The Laborer’s Return</a>
+    <a href="a-final-word.html" class="toc-link">A Final Word — The Meeting Place</a>
+    <a href="back-matter.html" class="toc-link">Back Matter</a>
+  </div>
+  <footer class="site-footer">
+    <p><em>The God of Sticks and Stones</em> &mdash; Scripture, Creation, and the Quiet Language of God</p>
+    <p><a href="feedback.html" class="footer-nav">Reader Notes</a></p>
+    <p class="reader-count" id="reader-count"></p>
+  </footer>
+  <script src="assets/script.js"></script>
+</body>
+</html>
