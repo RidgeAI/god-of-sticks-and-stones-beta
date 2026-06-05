@@ -1027,11 +1027,10 @@ JS = '''\
   window.adjustFont = adjustFont;
 
   /* ── GoatCounter analytics ────────────────────────────────────────────── */
-  // SETUP: replace YOURSITE with your GoatCounter site code (e.g. 'godofsticks')
-  // Create a free account at https://www.goatcounter.com
+  // GoatCounter analytics — godofsticks.goatcounter.com
   (function () {
     var gc = document.createElement('script');
-    gc.dataset.goatcounter = 'https://YOURSITE.goatcounter.com/count';
+    gc.dataset.goatcounter = 'https://godofsticks.goatcounter.com/count';
     gc.async = true;
     gc.src = '//gc.zgo.at/count.js';
     document.head.appendChild(gc);
@@ -1042,7 +1041,7 @@ JS = '''\
   // Displays "Readers served: N" in the footer of the homepage only.
   var counterEl = document.getElementById('reader-count');
   if (counterEl) {
-    fetch('https://YOURSITE.goatcounter.com/counter//.json')
+    fetch('https://godofsticks.goatcounter.com/counter//.json')
       .then(function (r) { return r.json(); })
       .then(function (d) {
         if (d && d.count) {
