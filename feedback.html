@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reader Notes — The God of Sticks and Stones</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="controls">
+      <button class="ctrl-btn" onclick="adjustFont(-2)" aria-label="Decrease font size">A&minus;</button>
+      <button class="ctrl-btn" onclick="adjustFont(2)" aria-label="Increase font size">A+</button>
+      <button class="ctrl-btn" onclick="toggleTheme()" id="theme-btn" aria-label="Toggle theme">&#9790;</button>
+    </div>
+  </header>
+  <nav class="nav-bar">
+    <span class="nav-btn placeholder">&nbsp;</span>
+    <a href="index.html" class="nav-btn toc">&#9776; Contents</a>
+    <span class="nav-btn placeholder">&nbsp;</span>
+  </nav>
+  <main class="content">
+    <h1 class="page-title">Reader Notes</h1>
+    <div class="feedback-intro">
+      <p>Thank you for reading.</p>
+      <p>If a passage stayed with you, confused you, challenged you, or encouraged you, you are welcome to leave a note for the author.</p>
+      <p>Your comments are private and will help shape future revisions.</p>
+    </div>
+
+    <!--
+      SETUP: Replace YOUR_FORM_ID below with your Formspree endpoint.
+      1. Go to https://formspree.io and create a free account.
+      2. Create a new form — set the destination email to your address.
+      3. Copy the form ID from the endpoint URL (e.g. xpwzabcd).
+      4. Replace YOUR_FORM_ID in the action attribute below.
+      5. Test by submitting the form once; confirm the email arrives.
+    -->
+    <form
+      id="feedback-form"
+      action="https://formspree.io/f/mdavkwpb"
+      method="POST"
+    >
+
+      <div class="form-group">
+        <label class="form-label" for="reader-name">Name <em style="font-style:normal;text-transform:none;letter-spacing:0;">(optional)</em></label>
+        <input class="form-input" id="reader-name" type="text" name="name" autocomplete="name" placeholder="">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="reader-email">Email <em style="font-style:normal;text-transform:none;letter-spacing:0;">(optional — only if you would like a reply)</em></label>
+        <input class="form-input" id="reader-email" type="email" name="_replyto" autocomplete="email" placeholder="">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="reader-section">Chapter or Section</label>
+        <select class="form-select" id="reader-section" name="section">
+          <option value="">— Select —</option>
+          <option value="Front Matter">Front Matter</option>
+          <option value="Chapter 1 — Dust and Breath">Chapter 1 — Dust and Breath</option>
+          <option value="Chapter 2 — The Tree and the Garden">Chapter 2 — The Tree and the Garden</option>
+          <option value="Chapter 3 — Stone and Witness">Chapter 3 — Stone and Witness</option>
+          <option value="Chapter 4 — Seed and Field">Chapter 4 — Seed and Field</option>
+          <option value="Chapter 5 — Brick and Empire">Chapter 5 — Brick and Empire</option>
+          <option value="Chapter 6 — Wells and Depths">Chapter 6 — Wells and Depths</option>
+          <option value="Chapter 7 — Wilderness and Shepherds">Chapter 7 — Wilderness and Shepherds</option>
+          <option value="Chapter 8 — Mountains, Caves, and Lower Places">Chapter 8 — Mountains, Caves, and Lower Places</option>
+          <option value="Chapter 9 — Temple and Tabernacle">Chapter 9 — Temple and Tabernacle</option>
+          <option value="Chapter 10 — The Carpenter and the Cross">Chapter 10 — The Carpenter and the Cross</option>
+          <option value="Chapter 11 — Babel After Babel">Chapter 11 — Babel After Babel</option>
+          <option value="Chapter 12 — The Language of Creation">Chapter 12 — The Language of Creation</option>
+          <option value="Chapter 13 — The Stone the Builders Rejected">Chapter 13 — The Stone the Builders Rejected</option>
+          <option value="Chapter 14 — The Living Field">Chapter 14 — The Living Field</option>
+          <option value="Chapter 15 — The Harvest and the Laborers">Chapter 15 — The Harvest and the Laborers</option>
+          <option value="Chapter 16 — Rivers, Wells, and Living Water">Chapter 16 — Rivers, Wells, and Living Water</option>
+          <option value="Chapter 17 — The Final City and the Restored Garden">Chapter 17 — The Final City and the Restored Garden</option>
+          <option value="Chapter 18 — The God of Sticks and Stones">Chapter 18 — The God of Sticks and Stones</option>
+          <option value="Closing Reflection — The Laborer's Return">Closing Reflection — The Laborer's Return</option>
+          <option value="A Final Word — The Meeting Place">A Final Word — The Meeting Place</option>
+          <option value="Back Matter">Back Matter</option>
+          <option value="General Feedback">General Feedback</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="stayed-with-you">What stayed with you?</label>
+        <textarea class="form-textarea" id="stayed-with-you" name="stayed_with_you" rows="3"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="confused-you">What confused you?</label>
+        <textarea class="form-textarea" id="confused-you" name="confused_you" rows="3"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="felt-strongest">What felt strongest?</label>
+        <textarea class="form-textarea" id="felt-strongest" name="felt_strongest" rows="3"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="felt-weakest">What felt weakest?</label>
+        <textarea class="form-textarea" id="felt-weakest" name="felt_weakest" rows="3"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="additional-thoughts">Additional thoughts</label>
+        <textarea class="form-textarea" id="additional-thoughts" name="additional_thoughts" rows="4"></textarea>
+      </div>
+
+      <!-- Honeypot field — hidden from humans, catches bots -->
+      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+
+      <button type="submit" class="form-submit">Send notes &rarr;</button>
+
+    </form>
+
+    <div class="form-thankyou" id="form-thankyou">
+      <p>Your notes have been sent. Thank you for taking the time.</p>
+    </div>
+
+  </main>
+  <footer class="site-footer">
+    <p><em>The God of Sticks and Stones</em></p>
+  </footer>
+  <script src="assets/script.js"></script>
+  <script>
+    // Handle Formspree AJAX submission for a quiet, no-redirect experience
+    var form = document.getElementById('feedback-form');
+    var thankyou = document.getElementById('form-thankyou');
+    if (form) {
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        })
+        .then(function (r) {
+          if (r.ok) {
+            form.style.display = 'none';
+            if (thankyou) {
+              thankyou.style.display = 'block';
+            }
+          } else {
+            form.querySelector('.form-submit').textContent = 'Something went wrong — please try again.';
+          }
+        })
+        .catch(function () {
+          form.querySelector('.form-submit').textContent = 'Could not send — please try again.';
+        });
+      });
+    }
+  </script>
+</body>
+</html>

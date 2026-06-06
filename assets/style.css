@@ -404,3 +404,116 @@ th {
     font-size: 1.3rem;
   }
 }
+
+/* ── Footer navigation ──────────────────────────────────────────────────── */
+
+.footer-nav {
+  color: var(--text-subtle);
+  text-decoration: none;
+  font-size: 0.8rem;
+  display: inline-block;
+  margin-top: 0.35rem;
+}
+
+.footer-nav:hover {
+  color: var(--accent);
+}
+
+.reader-count {
+  font-size: 0.75rem;
+  color: var(--text-subtle);
+  margin-top: 0.5rem;
+  opacity: 0.7;
+  min-height: 1.1em;
+}
+
+/* ── Feedback form ──────────────────────────────────────────────────────── */
+
+.feedback-intro {
+  margin-bottom: 2.5rem;
+}
+
+.feedback-intro p {
+  margin-bottom: 1.1rem;
+}
+
+.form-group {
+  margin-bottom: 1.75rem;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--text-subtle);
+  margin-bottom: 0.5rem;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  width: 100%;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  color: var(--text);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 0.95rem;
+  padding: 0.6rem 0.75rem;
+  line-height: 1.65;
+  transition: border-color 0.15s;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 90px;
+}
+
+.form-select {
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 6'%3E%3Cpath d='M0 0l5 6 5-6' fill='none' stroke='%237a6e65' stroke-width='1.2'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.8rem center;
+  background-size: 9px;
+  padding-right: 2.25rem;
+}
+
+.form-submit {
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: var(--accent);
+  font-family: inherit;
+  font-size: 0.88rem;
+  padding: 0.45rem 1.2rem;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  margin-top: 0.25rem;
+}
+
+.form-submit:hover {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+.form-thankyou {
+  display: none;
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: var(--text-subtle);
+  font-style: italic;
+  margin-top: 1.5rem;
+  line-height: 1.65;
+}

@@ -66,4 +66,29 @@
   window.toggleTheme = toggleTheme;
   window.adjustFont = adjustFont;
 
+  /* ── GoatCounter analytics ────────────────────────────────────────────── */
+  // GoatCounter analytics — godofsticks.goatcounter.com
+  (function () {
+    var gc = document.createElement('script');
+    gc.dataset.goatcounter = 'https://godofsticks.goatcounter.com/count';
+    gc.async = true;
+    gc.src = '//gc.zgo.at/count.js';
+    document.head.appendChild(gc);
+  }());
+
+  /* ── Visitor counter (homepage only) ─────────────────────────────────── */
+  // Requires GoatCounter to be configured above and public stats enabled.
+  // Displays "Readers served: N" in the footer of the homepage only.
+  var counterEl = document.getElementById('reader-count');
+  if (counterEl) {
+    fetch('https://godofsticks.goatcounter.com/counter//.json')
+      .then(function (r) { return r.json(); })
+      .then(function (d) {
+        if (d && d.count) {
+          counterEl.textContent = 'Readers served: ' + d.count;
+        }
+      })
+      .catch(function () {}); // fails silently if not configured
+  }
+
 }());
